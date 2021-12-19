@@ -2,17 +2,15 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:35:05
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 16:13:32
+ * @LastEditTime: 2021-12-19 16:47:19
  * @Description: 我添加了修改 
  */
-import { effect } from '../effect'
+import { effect, stop } from '../effect'
 import { reactive} from '../reactive'
 
 describe('effect', () => {
   it('happy path', () => {
-    const user = reactive({
-      age: 10
-    })
+    const user = reactive({ age: 10 })
     let nextAge
     effect(() => {
       nextAge = user.age + 1 
@@ -42,7 +40,7 @@ describe('effect', () => {
     const scheduler = jest.fn(() => {
       run = runner
     })
-    const obj = reactive({foo: 1})
+    const obj = reactive({ foo: 1 })
     const runner = effect(() => {
       dummy = obj.foo
     }, { scheduler })
@@ -53,5 +51,31 @@ describe('effect', () => {
     expect(dummy).toBe(1)
     run()
     expect(dummy).toBe(2)
+  })
+
+  it('stop', () => {
+    let dummy
+    const obj = reactive({ prop: 1})
+    const runner = effect(() => {
+      dummy = obj.prop
+    })
+    obj.prop = 2
+    expect(dummy).toBe(2)
+    stop(runner)
+    obj.prop = 3
+    expect(dummy).toBe(2)
+    runner()
+    expect(dummy).toBe(3)
+  })
+
+  it('onStop', () => {
+    const obj = reactive({ foo: 1 })
+    const onStop = jest.fn()
+    let dummy
+    const runner = effect(() => {
+      dummy = obj.foo
+    }, { onStop })
+    stop(runner)
+    expect(onStop).toBeCalledTimes(1)
   })
 })

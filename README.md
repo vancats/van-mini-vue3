@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 16:15:51
+ * @LastEditTime: 2021-12-19 16:55:36
  * @Description: 我添加了修改
 -->
 
@@ -26,3 +26,7 @@
 ### 三、添加effect返回值runner
 
 ### 四、添加effect参数scheduler,设置延迟执行
+
+### 五、添加effect的stop功能
+  1. stop时删除依赖
+  2. 添加active与onStop
