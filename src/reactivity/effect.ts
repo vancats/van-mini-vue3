@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 13:19:28
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 14:41:02
+ * @LastEditTime: 2021-12-19 15:08:48
  * @Description: 我添加了修改
  */
 
@@ -13,7 +13,7 @@ class ReactiveEffect {
   }
   run() {
     activeEffect = this
-    this._fn()
+    return this._fn()
   }
 }
 
@@ -45,4 +45,5 @@ export function effect(fn) {
   const _effect = new ReactiveEffect(fn)
 
   _effect.run()
+  return _effect.run.bind(_effect)
 }

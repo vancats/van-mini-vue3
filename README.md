@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 14:59:56
+ * @LastEditTime: 2021-12-19 15:16:07
  * @Description: 我添加了修改
 -->
 
@@ -22,3 +22,5 @@
   1. 添加 lib
   2. reactive 的get, set代理
   3. effect 的自执行,以及track,trigger的依赖收集
+
+### 三、添加effect返回值runner
