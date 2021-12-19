@@ -30,3 +30,7 @@
 ### 五、添加effect的stop功能
   1. stop时删除依赖
   2. 添加active与onStop
+
+### 六、添加readonly
+  1. 重构get,set逻辑--baseHandler
+  2. 测试中使用jest.fn
