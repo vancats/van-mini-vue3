@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:35:05
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 15:12:52
+ * @LastEditTime: 2021-12-19 16:13:32
  * @Description: 我添加了修改 
  */
 import { effect } from '../effect'
@@ -34,5 +34,24 @@ describe('effect', () => {
     const res = runner()
     expect(foo).toBe(12)
     expect(res).toBe('foo')
+  })
+
+  it('scheduler', () => {
+    let dummy
+    let run: any
+    const scheduler = jest.fn(() => {
+      run = runner
+    })
+    const obj = reactive({foo: 1})
+    const runner = effect(() => {
+      dummy = obj.foo
+    }, { scheduler })
+    expect(scheduler).not.toHaveBeenCalled()
+    expect(dummy).toBe(1)
+    obj.foo++
+    expect(scheduler).toHaveBeenCalledTimes(1)
+    expect(dummy).toBe(1)
+    run()
+    expect(dummy).toBe(2)
   })
 })
