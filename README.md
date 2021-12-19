@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 16:55:36
+ * @LastEditTime: 2021-12-19 22:38:28
  * @Description: 我添加了修改
 -->
 
@@ -34,3 +34,5 @@
 ### 六、添加readonly
   1. 重构get,set逻辑--baseHandler
   2. 测试中使用jest.fn
+
+### 七、添加isReactive和isReadonly函数
