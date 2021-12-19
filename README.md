@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 12:58:51
+ * @LastEditTime: 2021-12-19 14:59:56
  * @Description: 我添加了修改
 -->
 
@@ -17,3 +17,8 @@
     - yarn add --dev babel-jest @babel/core @babel/preset-env
     - yarn add --dev @babel/preset-typescript
   4. 配置babel.config.js
+
+### 二、实现effect,reactive
+  1. 添加 lib
+  2. reactive 的get, set代理
+  3. effect 的自执行,以及track,trigger的依赖收集
