@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:35:05
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 16:47:19
+ * @LastEditTime: 2021-12-20 22:05:59
  * @Description: 我添加了修改 
  */
 import { effect, stop } from '../effect'
@@ -62,7 +62,8 @@ describe('effect', () => {
     obj.prop = 2
     expect(dummy).toBe(2)
     stop(runner)
-    obj.prop = 3
+    // obj.prop = 3
+    obj.prop++
     expect(dummy).toBe(2)
     runner()
     expect(dummy).toBe(3)

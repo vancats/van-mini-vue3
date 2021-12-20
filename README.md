@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 22:38:28
+ * @LastEditTime: 2021-12-20 22:53:20
  * @Description: 我添加了修改
 -->
 
@@ -36,3 +36,7 @@
   2. 测试中使用jest.fn
 
 ### 七、添加isReactive和isReadonly函数
+
+### 八、优化stop
+  1. 优化get(track), set(trigger)逻辑
+
