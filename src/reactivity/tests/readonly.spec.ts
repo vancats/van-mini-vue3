@@ -2,11 +2,11 @@
  * @Author: Lqf
  * @Date: 2021-12-19 21:06:36
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-20 23:07:24
+ * @LastEditTime: 2021-12-22 20:33:00
  * @Description: 我添加了修改
  */
 
-import { readonly, isReadonly } from "../reactive"
+import { readonly, isReadonly, isProxy } from "../reactive"
 
 
 describe('readonly', () => {
@@ -19,6 +19,7 @@ describe('readonly', () => {
     expect(isReadonly(original.bar)).toBe(false)
     expect(wrapped).not.toBe(original)
     expect(wrapped.foo).toBe(1)
+    expect(isProxy(wrapped)).toBe(true)
   })
 
   it('should call console.warn when set', () => {

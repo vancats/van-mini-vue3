@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-22 20:28:27
+ * @LastEditTime: 2021-12-22 20:33:45
  * @Description: 我添加了修改
 -->
 
@@ -43,3 +43,5 @@
 ### 九、reactive&readonly嵌套
 
 ### 十、添加shallowReadonly
+
+### 十一、添加isProxy(是否reactive|readonly)
