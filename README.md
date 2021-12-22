@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-20 23:09:35
+ * @LastEditTime: 2021-12-22 20:28:27
  * @Description: 我添加了修改
 -->
 
@@ -42,4 +42,4 @@
 
 ### 九、reactive&readonly嵌套
 
-
+### 十、添加shallowReadonly

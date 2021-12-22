@@ -2,11 +2,11 @@
  * @Author: Lqf
  * @Date: 2021-12-19 13:07:35
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-19 22:33:04
+ * @LastEditTime: 2021-12-22 20:16:00
  * @Description: 我添加了修改
  */
 
-import { mutableHandlers, readonlyHandlers } from "./baseHandler"
+import { mutableHandlers, readonlyHandlers, shallowReadonlyHandlers } from "./baseHandler"
 
 export const enum ReactiveFlags {
   IS_REACTIVE = '__v_isReactive',
@@ -19,6 +19,10 @@ export function reactive(raw) {
 
 export function readonly(raw) {
   return createReactiveObject(raw, readonlyHandlers)
+}
+
+export function shallowReadonly(raw) {
+  return createReactiveObject(raw, shallowReadonlyHandlers)
 }
 
 export function isReactive(value) {
