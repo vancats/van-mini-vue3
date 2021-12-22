@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-22 20:33:45
+ * @LastEditTime: 2021-12-22 21:24:09
  * @Description: 我添加了修改
 -->
 
@@ -45,3 +45,8 @@
 ### 十、添加shallowReadonly
 
 ### 十一、添加isProxy(是否reactive|readonly)
+
+### 十二、添加ref
+  1. 创建RefImpl类,实现value取值
+  2. 重构track, trigger,抽离逻辑
+  3. 进行ref的object对比,完成reactive嵌套

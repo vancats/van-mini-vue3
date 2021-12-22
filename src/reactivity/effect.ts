@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 13:19:28
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-20 22:51:37
+ * @LastEditTime: 2021-12-22 21:02:45
  * @Description: 我添加了修改
  */
 
@@ -50,7 +50,6 @@ function cleanupEffect(effect) {
 
 const targetMap = new Map()
 export function track(target, key) {
-  
   if(!isTracking()) return true
   
   let depsMap = targetMap.get(target)
@@ -63,18 +62,26 @@ export function track(target, key) {
     dep = new Set()
     depsMap.set(key, dep)
   }
+  trackEffects(dep)
+}
+
+export function trackEffects(dep) {
   if (dep.has(activeEffect)) return
   dep.add(activeEffect)
   activeEffect.deps.push(dep)
 }
 
-function isTracking() {
+export function isTracking() {
   return shouldTrack && activeEffect !== undefined
 }
 
 export function trigger(target, key) {
   let depsMap = targetMap.get(target)
   let dep = depsMap.get(key)
+  triggerEffects(dep)
+}
+
+export function triggerEffects(dep) {
   for (const effect of dep) {
     if (effect.scheduler) {
       effect.scheduler()
