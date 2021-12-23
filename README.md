@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-23 21:21:11
+ * @LastEditTime: 2021-12-23 21:44:53
  * @Description: 我添加了修改
 -->
 
@@ -52,3 +52,7 @@
   3. 进行ref的object对比,完成reactive嵌套
 
 ### 十三、isRef&unRef
+
+### 十四、proxyRefs
+  1. get时无需取value,如template与setup值的联系
+  2. set时当值为ref直接替换
