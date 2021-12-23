@@ -2,12 +2,13 @@
  * @Author: Lqf
  * @Date: 2021-12-22 20:49:42
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-22 21:15:16
+ * @LastEditTime: 2021-12-23 21:19:42
  * @Description: 我添加了修改
  */
 
 import { effect } from "../effect"
-import { ref } from "../ref"
+import { reactive } from "../reactive"
+import { isRef, ref, unRef } from "../ref"
 
 describe('ref', () => {
   it('basic', () => {
@@ -45,5 +46,19 @@ describe('ref', () => {
     expect(dummy).toBe(1)
     a.value.count = 2
     expect(dummy).toBe(2)
+  })
+
+  it('is ref', () => {
+    const a = ref(1)
+    const user = reactive({ age: 1 })
+    expect(isRef(a)).toBe(true)
+    expect(isRef(1)).toBe(false)
+    expect(isRef(user)).toBe(false)
+  })
+
+  it('is unRef', () => {
+    const a = ref(1)
+    expect(unRef(a)).toBe(1)
+    expect(unRef(1)).toBe(1)
   })
 })
