@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 13:19:28
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-22 21:02:45
+ * @LastEditTime: 2021-12-23 23:25:12
  * @Description: 我添加了修改
  */
 
@@ -10,7 +10,7 @@ import { extend } from "../shared"
 
 let activeEffect
 let shouldTrack
-class ReactiveEffect {
+export class ReactiveEffect {
   private _fn: any
   deps = []
   active = true

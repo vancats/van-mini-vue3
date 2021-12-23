@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-23 21:44:53
+ * @LastEditTime: 2021-12-23 23:38:34
  * @Description: 我添加了修改
 -->
 
@@ -56,3 +56,9 @@
 ### 十四、proxyRefs
   1. get时无需取value,如template与setup值的联系
   2. set时当值为ref直接替换
+
+### 十五、computed
+  1. 新建ComputedRefImpl类
+  2. 添加_dirty参数实现缓存功能
+  3. 调用ReactiveEffect实现getter响应式
+  4. 通过scheduler功能实现_dirty更新
