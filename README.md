@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-23 23:38:34
+ * @LastEditTime: 2021-12-25 23:32:08
  * @Description: 我添加了修改
 -->
 
@@ -62,3 +62,6 @@
   2. 添加_dirty参数实现缓存功能
   3. 调用ReactiveEffect实现getter响应式
   4. 通过scheduler功能实现_dirty更新
+
+### 十六、init component
+  1. 
