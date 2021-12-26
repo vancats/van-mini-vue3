@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:40:37
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 22:07:20
+ * @LastEditTime: 2021-12-26 22:32:30
  * @Description: 我添加了修改
  */
 
@@ -36,7 +36,14 @@ function mountElement(vnode: any, container: any) {
 
   for (const key in props) {
     const val = props[key]
-    el.setAttribute(key, val)
+
+    const isOn = (key: string) => /^on[A-Z]/.test(key)
+    if (isOn(key)) {
+      const event = key.slice(2).toLowerCase()
+      el.addEventListener(event, val)
+    } else {
+      el.setAttribute(key, val)
+    }
   }
 
   if (shapeFlag & ShapeFlags.TEXT_CHILDREN) {

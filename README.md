@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 22:18:51
+ * @LastEditTime: 2021-12-26 22:33:55
  * @Description: 我添加了修改
 -->
 
@@ -96,3 +96,4 @@
   1. 增加ShapeFlags枚举项
   2. 通过位运算计算vnode的shapeFlag
    
+### 二十一、事件注册
