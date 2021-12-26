@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-25 23:32:08
+ * @LastEditTime: 2021-12-26 17:21:42
  * @Description: 我添加了修改
 -->
 
@@ -64,4 +64,19 @@
   4. 通过scheduler功能实现_dirty更新
 
 ### 十六、init component
-  1. 
+  1. mount
+  2. createVNode 创建vnode
+  3. render(vnode, rootContainer)
+  4. patch -> processComponent -> mountComponent
+  5. createComponentInstance
+  6. setupComponent(instance) -> initProps/initSlots
+  7. setupStatefulComponent
+  8. handleSetupResult
+  9. finishComponentSetup
+  10. setupRenderEffect -> subTree = instance.render
+  11. patch(subTree, container)
+
+### 十七、rollup打包
+  1. 引入rollup,配置rollup.config.js
+  2. 解析typescript @rollup/plugin-typescript
+  3. 修改package人口文件

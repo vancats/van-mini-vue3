@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-25 23:29:02
+ * @LastEditTime: 2021-12-26 17:19:02
  * @Description: 我添加了修改
  */
 
@@ -46,7 +46,7 @@ function handleSetupResult(instance, setupResult: any) {
 function finishComponentSetup(instance: any) {
   const Component = instance.type
 
-  instance.render = Component
+  instance.render = Component.render
 
 }
 
