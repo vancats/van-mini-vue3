@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 20:34:13
+ * @LastEditTime: 2021-12-26 22:18:51
  * @Description: 我添加了修改
 -->
 
@@ -91,3 +91,8 @@
   1. setupState代理
   2. $el代理
   3. publicPropertiesMap代理对象
+
+### 二十、ShapeFlags
+  1. 增加ShapeFlags枚举项
+  2. 通过位运算计算vnode的shapeFlag
+   

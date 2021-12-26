@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 20:09:44
+ * @LastEditTime: 2021-12-26 22:05:36
  * @Description: 我添加了修改
  */
 
@@ -13,7 +13,6 @@ export function createComponentInstance(vnode) {
     vnode,
     type: vnode.type,
     setupState: {},
-    el: null
   }
   return component
 }
