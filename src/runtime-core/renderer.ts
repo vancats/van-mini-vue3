@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:40:37
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 18:00:51
+ * @LastEditTime: 2021-12-26 21:06:50
  * @Description: 我添加了修改
  */
 
@@ -31,13 +31,13 @@ function processElement(vnode: any, container: any) {
 
 function mountElement(vnode: any, container: any) {
   const { type, props, children } = vnode
-  const el = document.createElement(type)
-  
+  const el = (vnode.el = document.createElement(type))
+
   for (const key in props) {
     const val = props[key]
     el.setAttribute(key, val)
   }
-  
+
   if (typeof children === 'string') {
     el.textContent = children
   } else if (Array.isArray(children)) {
@@ -58,20 +58,23 @@ function processComponent(vnode: any, container: any) {
   mountComponent(vnode, container)
 }
 
-function mountComponent(vnode: any, container) {
+function mountComponent(initialVNode: any, container) {
 
-  const instance = createComponentInstance(vnode)
+  const instance = createComponentInstance(initialVNode)
 
   setupComponent(instance)
-  setupRenderEffect(instance, container)
+  setupRenderEffect(instance, initialVNode, container)
 }
 
-function setupRenderEffect(instance: any, container) {
+function setupRenderEffect(instance: any, initialVNode, container) {
 
-  const subTree = instance.render()
+  const { proxy } = instance
+  const subTree = instance.render.call(proxy)
 
   // vnode -> patch
   // vnode -> element -> mountELement
   patch(subTree, container)
+
+  initialVNode.el = subTree.el
 }
 

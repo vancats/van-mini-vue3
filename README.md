@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 18:07:37
+ * @LastEditTime: 2021-12-26 20:34:13
  * @Description: 我添加了修改
 -->
 
@@ -86,3 +86,8 @@
   2. createElement
   3. patchProp
   4. mountChildren
+
+### 十九、component proxy
+  1. setupState代理
+  2. $el代理
+  3. publicPropertiesMap代理对象
