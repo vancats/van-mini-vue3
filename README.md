@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 17:21:42
+ * @LastEditTime: 2021-12-26 18:07:37
  * @Description: 我添加了修改
 -->
 
@@ -80,3 +80,9 @@
   1. 引入rollup,配置rollup.config.js
   2. 解析typescript @rollup/plugin-typescript
   3. 修改package人口文件
+
+### 十八、init element
+  1. patch -> processElement -> mountELement
+  2. createElement
+  3. patchProp
+  4. mountChildren

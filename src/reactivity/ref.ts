@@ -7,7 +7,7 @@ import { isObject } from "./../shared/index";
  * @Description: 我添加了修改
  */
 
-import { hasChanged } from "../shared"
+import { hasChanged } from "../shared/index"
 import { isTracking, trackEffects, triggerEffects } from "./effect"
 import { reactive } from "./reactive"
 
