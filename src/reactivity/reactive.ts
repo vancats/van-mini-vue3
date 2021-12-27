@@ -1,8 +1,9 @@
+import { isObject } from "./../shared/index";
 /*
  * @Author: Lqf
  * @Date: 2021-12-19 13:07:35
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-22 20:16:00
+ * @LastEditTime: 2021-12-27 19:37:33
  * @Description: 我添加了修改
  */
 
@@ -38,5 +39,9 @@ export function isProxy(value) {
 }
 
 function createReactiveObject(target, baseHandlers) {
+  if(!isObject(target)) {
+    console.warn(`target ${target} 必须是对象`)
+    return
+  }
   return new Proxy(target, baseHandlers)
 }

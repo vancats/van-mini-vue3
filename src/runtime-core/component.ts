@@ -2,24 +2,28 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-26 22:05:36
+ * @LastEditTime: 2021-12-27 19:35:03
  * @Description: 我添加了修改
  */
 
+import { shallowReadonly } from "../reactivity/reactive"
+import { initProps } from "./componentProps"
 import { PublicInstanceProxyHandlers } from "./componentPublicInstance"
 
 export function createComponentInstance(vnode) {
   const component = {
     vnode,
     type: vnode.type,
-    setupState: {},
+    setupState: {}, 
+    props: {},
+    children: []
   }
   return component
 }
 
 export function setupComponent(instance) {
+  initProps(instance, instance.vnode.props)
   // TODO
-  // initProps
   // initSlots
 
   setupStatefulComponent(instance)
@@ -33,7 +37,7 @@ function setupStatefulComponent(instance: any) {
 
   const { setup } = Component
   if (setup) {
-    const setupResult = setup()
+    const setupResult = setup(shallowReadonly(instance.props) )
 
     handleSetupResult(instance, setupResult)
   }
