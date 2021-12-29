@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-27 19:57:24
+ * @LastEditTime: 2021-12-27 21:37:08
  * @Description: 我添加了修改
 -->
 
@@ -99,3 +99,7 @@
 ### 二十一、事件注册
 
 ### 二十二、component props
+
+### 二十三、component emit
+  1. 组件注册emit函数
+  2. 驼峰命名转化
