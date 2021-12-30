@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-29 23:26:48
+ * @LastEditTime: 2021-12-31 00:46:00
  * @Description: 我添加了修改
  */
 
@@ -41,10 +41,11 @@ function setupStatefulComponent(instance: any) {
 
   const { setup } = Component
   if (setup) {
+    setCurrentInstance(instance)
     const setupResult = setup(shallowReadonly(instance.props), {
       emit: instance.emit
     })
-
+    setCurrentInstance(null)
     handleSetupResult(instance, setupResult)
   }
 }
@@ -66,3 +67,11 @@ function finishComponentSetup(instance: any) {
 
 }
 
+let currentInstance = null
+export function getCurrentInstance() {
+  return currentInstance
+}
+
+export function setCurrentInstance(instance) {
+  currentInstance = instance
+}
