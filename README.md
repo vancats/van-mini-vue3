@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-27 21:37:08
+ * @LastEditTime: 2021-12-30 22:50:32
  * @Description: 我添加了修改
 -->
 
@@ -103,3 +103,10 @@
 ### 二十三、component emit
   1. 组件注册emit函数
   2. 驼峰命名转化
+
+### 二十四、slot
+  1. 增加slot选项
+  2. 实现数组形式插槽
+  3. 实现对象形式插槽
+  4. 实现具名插槽
+  5. 实现作用域插槽

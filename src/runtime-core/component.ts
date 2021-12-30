@@ -2,13 +2,14 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-27 21:09:55
+ * @LastEditTime: 2021-12-29 23:26:48
  * @Description: 我添加了修改
  */
 
 import { shallowReadonly } from "../reactivity/reactive"
 import { emit } from "./componentEmit"
 import { initProps } from "./componentProps"
+import { initSlots } from "./componentSlots"
 import { PublicInstanceProxyHandlers } from "./componentPublicInstance"
 
 export function createComponentInstance(vnode) {
@@ -17,6 +18,7 @@ export function createComponentInstance(vnode) {
     type: vnode.type,
     setupState: {},
     props: {},
+    slots: {},
     children: [],
     emit: () => { }
   }
@@ -26,8 +28,7 @@ export function createComponentInstance(vnode) {
 
 export function setupComponent(instance) {
   initProps(instance, instance.vnode.props)
-  // TODO
-  // initSlots
+  initSlots(instance, instance.vnode.children)
 
   setupStatefulComponent(instance)
 }
