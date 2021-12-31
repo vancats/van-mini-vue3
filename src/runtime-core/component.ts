@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-31 00:46:00
+ * @LastEditTime: 2021-12-31 20:57:10
  * @Description: 我添加了修改
  */
 
@@ -12,14 +12,17 @@ import { initProps } from "./componentProps"
 import { initSlots } from "./componentSlots"
 import { PublicInstanceProxyHandlers } from "./componentPublicInstance"
 
-export function createComponentInstance(vnode) {
+export function createComponentInstance(vnode, parent) {
+  console.log('createComponentInstance', parent)
   const component = {
     vnode,
     type: vnode.type,
     setupState: {},
     props: {},
     slots: {},
+    parent,
     children: [],
+    provides: parent ? parent.provides : {},
     emit: () => { }
   }
   component.emit = emit.bind(null, component) as any

@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-31 00:47:16
+ * @LastEditTime: 2021-12-31 21:36:09
  * @Description: 我添加了修改
 -->
 
@@ -114,3 +114,9 @@
 ### 二十五、Fragment & Text
 
 ### 二十六、getCurrentInstance
+
+### 二十七、provide & inject
+  1. 实例获取,组件增加provides选项
+  2. 默认获取父组件provides
+  3. 初始化,断原型链
+  4. inject默认值处理
