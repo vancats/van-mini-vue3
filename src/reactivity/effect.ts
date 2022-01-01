@@ -6,7 +6,7 @@
  * @Description: 我添加了修改
  */
 
-import { extend } from "../shared/index"
+import { extend } from "../shared"
 
 let activeEffect
 let shouldTrack
@@ -50,8 +50,8 @@ function cleanupEffect(effect) {
 
 const targetMap = new Map()
 export function track(target, key) {
-  if(!isTracking()) return true
-  
+  if (!isTracking()) return true
+
   let depsMap = targetMap.get(target)
   if (!depsMap) {
     depsMap = new Map()

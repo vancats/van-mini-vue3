@@ -1,13 +1,13 @@
-import { isObject } from "./../shared/index";
 /*
- * @Author: Lqf
- * @Date: 2021-12-22 20:49:54
- * @LastEditors: Lqf
- * @LastEditTime: 2021-12-23 21:41:01
- * @Description: 我添加了修改
- */
+* @Author: Lqf
+* @Date: 2021-12-22 20:49:54
+* @LastEditors: Lqf
+* @LastEditTime: 2022-01-01 15:14:58
+* @Description: 我添加了修改
+*/
 
-import { hasChanged } from "../shared/index"
+import { isObject } from "./../shared"
+import { hasChanged } from "../shared"
 import { isTracking, trackEffects, triggerEffects } from "./effect"
 import { reactive } from "./reactive"
 

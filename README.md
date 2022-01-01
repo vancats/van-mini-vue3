@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-31 21:36:09
+ * @LastEditTime: 2022-01-01 16:17:15
  * @Description: 我添加了修改
 -->
 
@@ -120,3 +120,8 @@
   2. 默认获取父组件provides
   3. 初始化,断原型链
   4. inject默认值处理
+
+### 二十八、custom renderer
+  1. 重构renderer,实现接口封装
+  2. 实现自定义渲染器
+  3. 基于PIXI.js实现canvas渲染

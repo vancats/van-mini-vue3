@@ -2,11 +2,11 @@
  * @Author: Lqf
  * @Date: 2021-12-26 20:18:07
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-29 23:32:31
+ * @LastEditTime: 2022-01-01 15:13:13
  * @Description: 我添加了修改
  */
 
-import { hasOwn } from "../shared/index"
+import { hasOwn } from "../shared"
 
 const publicPropertiesMap = {
   $el: (i) => i.vnode.el,

@@ -1,12 +1,12 @@
-import { isObject } from "./../shared/index";
 /*
- * @Author: Lqf
- * @Date: 2021-12-19 13:07:35
+* @Author: Lqf
+* @Date: 2021-12-19 13:07:35
  * @LastEditors: Lqf
- * @LastEditTime: 2021-12-27 19:37:33
- * @Description: 我添加了修改
- */
+ * @LastEditTime: 2022-01-01 15:58:30
+* @Description: 我添加了修改
+*/
 
+import { isObject } from "./../shared"
 import { mutableHandlers, readonlyHandlers, shallowReadonlyHandlers } from "./baseHandler"
 
 export const enum ReactiveFlags {
@@ -39,7 +39,7 @@ export function isProxy(value) {
 }
 
 function createReactiveObject(target, baseHandlers) {
-  if(!isObject(target)) {
+  if (!isObject(target)) {
     console.warn(`target ${target} 必须是对象`)
     return
   }
