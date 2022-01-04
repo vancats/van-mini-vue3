@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-01 16:17:15
+ * @LastEditTime: 2022-01-04 23:40:06
  * @Description: 我添加了修改
 -->
 
@@ -125,3 +125,7 @@
   1. 重构renderer,实现接口封装
   2. 实现自定义渲染器
   3. 基于PIXI.js实现canvas渲染
+
+### 二十九、update流程搭建
+  1. 使用proxyRefs代理setupResult
+  2. 采用effect进行依赖收集与更新
