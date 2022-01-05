@@ -6,6 +6,8 @@
  * @Description: 我添加了修改
  */
 
+export const EMPTY_OBJ = {}
+
 export const extend = Object.assign
 
 export const isObject = (val) => {

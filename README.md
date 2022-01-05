@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-04 23:40:06
+ * @LastEditTime: 2022-01-05 22:07:28
  * @Description: 我添加了修改
 -->
 
@@ -129,3 +129,5 @@
 ### 二十九、update流程搭建
   1. 使用proxyRefs代理setupResult
   2. 采用effect进行依赖收集与更新
+
+### 三十、patchProps 修改与删除
