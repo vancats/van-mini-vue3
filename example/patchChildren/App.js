@@ -1,0 +1,32 @@
+/*
+ * @Author: Lqf
+ * @Date: 2022-01-05 22:11:46
+ * @LastEditors: Lqf
+ * @LastEditTime: 2022-01-05 23:10:05
+ * @Description: 我添加了修改
+ */
+import { h } from "../../lib/mini-vue.esm.js"
+
+// import TextToText from "./TextToText.js"
+// import ArrayToText from "./ArrayToText.js"
+import TextToArray from "./TextToArray.js"
+// import ArrayToArray from "./ArrayToArray.js"
+
+export default {
+  name: "App",
+  setup() { },
+
+  render() {
+    return h("div", { tId: 1 }, [
+      h("p", {}, "主页"),
+      // 老的是 text 新的是 text
+      // h(TextToText),
+      // 老的是 array 新的是 text
+      // h(ArrayToText),
+      // 老的是 text 新的是 array
+      h(TextToArray)
+      // 老的是 array 新的是 array
+      // h(ArrayToArray),
+    ])
+  },
+}

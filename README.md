@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-05 22:07:28
+ * @LastEditTime: 2022-01-05 23:14:03
  * @Description: 我添加了修改
 -->
 
@@ -131,3 +131,5 @@
   2. 采用effect进行依赖收集与更新
 
 ### 三十、patchProps 修改与删除
+
+### 三十一、patchChildren 三种情况下的更新

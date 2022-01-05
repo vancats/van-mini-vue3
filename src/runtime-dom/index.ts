@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2022-01-01 15:06:32
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-05 21:55:09
+ * @LastEditTime: 2022-01-05 22:29:06
  * @Description: 我添加了修改
  */
 
@@ -34,10 +34,23 @@ function insert(el, container) {
   container.append(el)
 }
 
+function remove(child) {
+  const parent = child.parentNode
+  if (parent) {
+    parent.removeChild(child)
+  }
+}
+
+function setElementText(el, text) {
+  el.textContent = text
+}
+
 const renderer: any = createRenderer({
   createElement,
   patchProp,
-  insert
+  insert,
+  remove,
+  setElementText
 })
 
 export function createApp(...args) {
