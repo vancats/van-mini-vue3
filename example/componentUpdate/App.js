@@ -1,0 +1,54 @@
+/*
+ * @Author: Lqf
+ * @Date: 2022-01-09 14:57:19
+ * @LastEditors: Lqf
+ * @LastEditTime: 2022-01-09 15:03:05
+ * @Description: 我添加了修改
+ */
+
+import { h, ref } from "../../lib/mini-vue.esm.js"
+import Child from "./Child.js"
+
+export const App = {
+  name: "App",
+  setup() {
+    const msg = ref("123")
+    const count = ref(1)
+
+    window.msg = msg
+
+    const changeChildProps = () => {
+      msg.value = "456"
+    }
+
+    const changeCount = () => {
+      count.value++
+    }
+
+    return { msg, changeChildProps, changeCount, count }
+  },
+
+  render() {
+    return h("div", {}, [
+      h("div", {}, "你好"),
+      h(
+        "button",
+        {
+          onClick: this.changeChildProps,
+        },
+        "change child props"
+      ),
+      h(Child, {
+        msg: this.msg,
+      }),
+      h(
+        "button",
+        {
+          onClick: this.changeCount,
+        },
+        "change self count"
+      ),
+      h("p", {}, "count: " + this.count),
+    ])
+  },
+}

@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-26 20:18:07
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-01 15:13:13
+ * @LastEditTime: 2022-01-09 15:46:31
  * @Description: 我添加了修改
  */
 
@@ -10,7 +10,8 @@ import { hasOwn } from "../shared"
 
 const publicPropertiesMap = {
   $el: (i) => i.vnode.el,
-  $slots: (i) => i.slots
+  $slots: (i) => i.slots,
+  $props: (i) => i.props
 }
 
 export const PublicInstanceProxyHandlers = {

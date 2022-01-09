@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-25 22:45:15
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-04 23:29:43
+ * @LastEditTime: 2022-01-09 15:58:26
  * @Description: 我添加了修改
  */
 
@@ -18,6 +18,7 @@ export function createComponentInstance(vnode, parent) {
   const component = {
     vnode,
     type: vnode.type,
+    next: null,
     setupState: {},
     props: {},
     slots: {},

@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-09 14:36:38
+ * @LastEditTime: 2022-01-09 16:20:57
  * @Description: 我添加了修改
 -->
 
@@ -138,6 +138,11 @@
   3. Array -> Text
   4. 双端对比
 
-### 三十二、patchChildren
+### 三十二、patchChildren 
   1. Array -> Array
   2. 最长递增子序列
+
+### 三十三、updateComponent
+  1. 更新组件props
+  2. 调用组件render函数
+  3. shouldUpdateComponent
