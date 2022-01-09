@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-09 16:20:57
+ * @LastEditTime: 2022-01-09 20:53:43
  * @Description: 我添加了修改
 -->
 
@@ -146,3 +146,5 @@
   1. 更新组件props
   2. 调用组件render函数
   3. shouldUpdateComponent
+
+### 三十四、实现nextTick
