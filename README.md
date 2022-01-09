@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2021-12-19 12:47:00
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-05 23:14:03
+ * @LastEditTime: 2022-01-09 14:36:38
  * @Description: 我添加了修改
 -->
 
@@ -132,4 +132,12 @@
 
 ### 三十、patchProps 修改与删除
 
-### 三十一、patchChildren 三种情况下的更新
+### 三十一、patchChildren
+  1. Text -> Text
+  2. Text -> Array
+  3. Array -> Text
+  4. 双端对比
+
+### 三十二、patchChildren
+  1. Array -> Array
+  2. 最长递增子序列

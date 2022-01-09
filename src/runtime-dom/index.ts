@@ -2,7 +2,7 @@
  * @Author: Lqf
  * @Date: 2022-01-01 15:06:32
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-05 22:29:06
+ * @LastEditTime: 2022-01-06 23:08:03
  * @Description: 我添加了修改
  */
 
@@ -29,9 +29,10 @@ function patchProp(el, key, prevVal, nextVal) {
   }
 }
 
-function insert(el, container) {
+function insert(child, parent, anchor) {
   console.log('----insert----')
-  container.append(el)
+  parent.insertBefore(child, anchor || null)
+
 }
 
 function remove(child) {

@@ -2,15 +2,15 @@
  * @Author: Lqf
  * @Date: 2022-01-05 22:11:46
  * @LastEditors: Lqf
- * @LastEditTime: 2022-01-05 23:10:05
+ * @LastEditTime: 2022-01-06 22:32:30
  * @Description: 我添加了修改
  */
 import { h } from "../../lib/mini-vue.esm.js"
 
 // import TextToText from "./TextToText.js"
 // import ArrayToText from "./ArrayToText.js"
-import TextToArray from "./TextToArray.js"
-// import ArrayToArray from "./ArrayToArray.js"
+// import TextToArray from "./TextToArray.js"
+import ArrayToArray from "./ArrayToArray.js"
 
 export default {
   name: "App",
@@ -24,9 +24,9 @@ export default {
       // 老的是 array 新的是 text
       // h(ArrayToText),
       // 老的是 text 新的是 array
-      h(TextToArray)
+      // h(TextToArray)
       // 老的是 array 新的是 array
-      // h(ArrayToArray),
+      h(ArrayToArray),
     ])
   },
 }
