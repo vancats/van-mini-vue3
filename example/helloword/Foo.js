@@ -1,4 +1,4 @@
-import { h, renderSlots, getCurrentInstance, inject, provide } from '../../lib/mini-vue.esm.js'
+import { h, renderSlots, getCurrentInstance, inject, provide, ref } from '../../lib/mini-vue.esm.js'
 import { Bar } from './Bar.js'
 
 export const Foo = {
@@ -10,33 +10,40 @@ export const Foo = {
       },
       'emitAdd'
     )
-    const foo = h('p', {}, 'foo' + this.add)
+    const foo = h('p', {}, 'foo' + this.add + ' + ' + this.count)
     console.log(this.$slots)
     const age = 18
+
     return h('div', {}, [foo, btn,
       renderSlots(this.$slots, 'header', { age }),
       renderSlots(this.$slots, 'footer'),
-      h(Bar)
+      h(Bar),
     ])
   },
   setup(props, { emit }) {
-    console.log(props)
+    // console.log(props)
     props.count++
 
-    const instance = getCurrentInstance()
-    console.log('instance: ', instance)
+    // const instance = getCurrentInstance()
+    // console.log('instance: ', instance)
+
+    const count = ref(1)
 
     const emitAdd = () => {
       console.log('emit add')
       emit('add', 1, 2)
       emit('add-foo', 3, 4)
+      count.value++
     }
 
     provide('add', 'AddFoo')
     const add = inject('add')
+
+
     return {
       emitAdd,
-      add
+      add,
+      count
     }
   }
 }

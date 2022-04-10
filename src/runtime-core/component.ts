@@ -1,21 +1,24 @@
 import { PublicInstanceProxyHandlers } from "./componentPublicInstance"
 import { isObject } from "./../share/index"
 import { initProps } from "./componentProps"
-import { shallowReadonly } from "../reactive/reactive"
+import { proxyRefs, shallowReadonly } from "../reactive"
 import { emit } from "./componentEmit"
 import { initSlots } from "./componentSlot"
 
 export function createComponentInstance(vnode, parent) {
-  console.log('createComponentInstance: ', parent)
+  // console.log('createComponentInstance: ', parent)
   const component = {
     vnode,
     type: vnode.type,
+    next: null,
     props: {},
     setupState: {},
     emit: () => { },
     slots: {},
     provides: parent ? parent.provides : {},
     parent,
+    isMounted: false,
+    subTree: null,
   }
 
   component.emit = emit.bind(null, component) as any
@@ -48,7 +51,7 @@ function setupStatefulComponent(instance: any) {
 function handerSetupResult(instance: any, setupResult: any) {
   // TODO Function
   if (isObject(setupResult)) {
-    instance.setupState = setupResult
+    instance.setupState = proxyRefs(setupResult)
   }
   finishComponentSetup(instance)
 }

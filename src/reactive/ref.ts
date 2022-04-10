@@ -4,7 +4,7 @@ import { reactive } from "./reactive"
 
 class RefImpl {
   private _value: any
-  public dep: any
+  public dep = new Set()
   private _rawvalue: any
   public __v_isRef = true
   constructor(value) {
@@ -12,7 +12,6 @@ class RefImpl {
     this._rawvalue = this.value
     // 如果是对象，需要进行 reactive 转换
     this._value = convert(value)
-    this.dep = new Set()
   }
 
   get value() {

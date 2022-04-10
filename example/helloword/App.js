@@ -1,12 +1,12 @@
 import { h, createTextVNode, getCurrentInstance, provide } from '../../lib/mini-vue.esm.js'
-import { Bar } from './Bar.js'
 import { Foo } from './Foo.js'
+import { Baz } from './Baz.js'
 
-window.self = null
+// window.self = null
 export const App = {
   name: 'App',
   render() {
-    window.self = this
+    // window.self = this
     return h('div', {
       id: 'banner',
       class: 'red',
@@ -30,11 +30,12 @@ export const App = {
           footer: () => [h('div', { class: 'footer' }), createTextVNode('hello!')],
         },
       ),
+      h(Baz)
     ])
   },
   setup() {
-    const instance = getCurrentInstance()
-    console.log('instance: ', instance)
+    // const instance = getCurrentInstance()
+    // console.log('instance: ', instance)
 
     provide('add', 'ADD')
     return {
