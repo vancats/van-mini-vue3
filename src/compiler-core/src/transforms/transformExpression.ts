@@ -1,6 +1,6 @@
 import { NodeTypes } from "../ast"
 
-export function transformExpress(node) {
+export function transformExpression(node) {
   if (node.type === NodeTypes.INTERPOLATION) {
     node.content = processExpression(node.content)
   }
