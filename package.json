@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lqf66/mini-vue.git"
+    "url": "git+https://github.com/lqf66/vancats-mini-vue3.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lqf66/mini-vue/issues"
+    "url": "https://github.com/lqf66/vancats-mini-vue3/issues"
   },
   "homepage": "https://github.com/lqf66/mini-vue#readme",
   "dependencies": {
