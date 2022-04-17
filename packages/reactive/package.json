@@ -1,0 +1,24 @@
+{
+  "name": "@canvats/reactive",
+  "version": "0.0.0",
+  "description": "@canvats/reactive",
+  "keywords": [
+    "vue3",
+    "reactive",
+    "canvats"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vancats/vancats-mini-vue3.git"
+  },
+  "author": "vancats <leiqifan@163.com> (https://github.com/vancats)",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/Vancats/vancats-mini-vue3/issues"
+  },
+  "homepage": "https://github.com/Vancats/vancats-mini-vue3#readme",
+  "dependencies": {
+    "@vancats/shared": "workspace:*"
+  }
+}

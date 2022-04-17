@@ -1,0 +1,21 @@
+{
+  "name": "@vancats/shared",
+  "version": "0.0.0",
+  "description": "@vancats/shared",
+  "keywords": [
+    "vue3",
+    "vancats",
+    "shared"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vancats/vancats-mini-vue3.git"
+  },
+  "author": "vancats <leiqifan@163.com> (https://github.com/vancats)",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/Vancats/vancats-mini-vue3/issues"
+  },
+  "homepage": "https://github.com/Vancats/vancats-mini-vue3#readme"
+}

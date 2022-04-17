@@ -1,31 +1,41 @@
 {
-  "name": "mini-vue",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vancats-vue3",
+  "version": "0.0.0",
+  "description": "vancats-vue3",
+  "keywords": [
+    "vue3",
+    "mini-vue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vancats/vancats-mini-vue3.git"
+  },
+  "author": "vancats <leiqifan@163.com> (https://github.com/vancats)",
   "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "bugs": {
+    "url": "https://github.com/Vancats/vancats-mini-vue3/issues"
+  },
+  "homepage": "https://github.com/Vancats/vancats-mini-vue3#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
+    "@vancats/eslint-config": "^0.0.6",
+    "babel-jest": "^27.5.1",
+    "chalk": "^4.1.2",
+    "eslint": "^8.13.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.3"
   },
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lqf66/vancats-mini-vue3.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lqf66/vancats-mini-vue3/issues"
-  },
-  "homepage": "https://github.com/lqf66/mini-vue#readme",
-  "dependencies": {
-    "babel-jest": "^27.5.1"
+  "eslintConfig": {
+    "extends": "@vancats"
   }
 }
