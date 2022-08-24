@@ -266,7 +266,7 @@ export function createRenderer(option) {
       // 获取新队列的节点的 key
       let keyToNewIndexMap = new Map()
       // 新队列对应的旧队列的 key
-      let newIndexToOldIndexMap = new Array(patched)
+      let newIndexToOldIndexMap = new Array(toBePatched)
       for (let i = 0; i < toBePatched; i++) newIndexToOldIndexMap[i] = 0
 
       // 设置新队列的 key
